@@ -1,0 +1,1 @@
+function [ r, t ] = matrt( dim, centreij )% MATRT  Make polar coordinate matrices%% [ r, t ] = matrt( dim, centreij )% 18-Oct-1999 -- created (RFM)% set default argumentsdefarg('centreij',[]);% make xy coordinate matrices[x,y] = matxy(dim,centreij);% convert to polar coordinatesr = sqrt(x.^2+y.^2);if nargout>=2	t = atan2(y,x);endreturn
